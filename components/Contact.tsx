@@ -7,6 +7,7 @@ export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState<{ [k: string]: string }>({});
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
 
   const validate = () => {
     const e: { [k: string]: string } = {};
@@ -17,10 +18,28 @@ export default function Contact() {
     return Object.keys(e).length === 0;
   };
 
-  const onSubmit = (ev: React.FormEvent) => {
+  const onSubmit = async (ev: React.FormEvent) => {
     ev.preventDefault();
     if (!validate()) return;
-    setSent(true);
+    setSending(true);
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/iquiism@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          _subject: `New project inquiry from ${form.name}`,
+        }),
+      });
+      if (!res.ok) throw new Error("send failed");
+      setSent(true);
+    } catch {
+      setErrors({ message: "Couldn't send — please email me directly at iquiism@gmail.com." });
+    } finally {
+      setSending(false);
+    }
   };
 
   const inputCls = (bad?: string) =>
@@ -99,9 +118,10 @@ export default function Contact() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full font-semibold bg-gold-500 hover:bg-gold-400 text-ink-950 px-8 py-4 rounded-full transition-all hover:shadow-xl hover:shadow-gold-500/25"
+                    disabled={sending}
+                    className="w-full font-semibold bg-gold-500 hover:bg-gold-400 text-ink-950 px-8 py-4 rounded-full transition-all hover:shadow-xl hover:shadow-gold-500/25 disabled:opacity-60"
                   >
-                    Send Message
+                    {sending ? "Sending..." : "Send Message"}
                   </button>
                 </form>
               )}
