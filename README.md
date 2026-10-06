@@ -1,15 +1,25 @@
-<h1>iquism — Web Developer Portfolio</h1>
+<div align="center">
+  <h1>iquism — Web Developer Portfolio</h1>
+  <p><b>Personal developer portfolio — projects, services, work process &amp; contact.</b></p>
+  <p>
+    <a href="https://iquism-portfolio.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-Visit_Site-0A192F?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" /></a>
+    <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  </p>
+</div>
 
-<p>
-  <a href="https://iquism-portfolio.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-Visit_Site-0A192F?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" /></a>
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-</p>
+<br />
 
-<p>Personal developer portfolio — projects, services, work process, and contact.</p>
+<div align="center">
+  <img src="iquism-portfolio.png" alt="Portfolio homepage" width="100%" />
+</div>
 
-<p>🔗 <b>Live:</b> <a href="https://iquism-portfolio.vercel.app">https://iquism-portfolio.vercel.app</a></p>
+<br />
+
+<h2>About</h2>
+
+<p>A sleek single-page portfolio — hero, about, project showcase, services, work process, testimonials, and contact form.</p>
 
 <h2>Sections</h2>
 
